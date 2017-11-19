@@ -14,4 +14,7 @@ import org.springframework.stereotype.Component;
 public class WechatAccountConfig {
     private String mpAppId;
     private String mpAppSecret;
+    private String mchId;
+    private String mchKey;
+    private String keyPath;
 }

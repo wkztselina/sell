@@ -13,6 +13,7 @@ import com.wkzt.sell.exception.SellException;
 import com.wkzt.sell.repository.OrderDetailRepository;
 import com.wkzt.sell.repository.OrderMasterRepository;
 import com.wkzt.sell.service.OrderService;
+import com.wkzt.sell.service.PayService;
 import com.wkzt.sell.service.ProductService;
 import com.wkzt.sell.utils.KeyUtil;
 import lombok.extern.slf4j.Slf4j;
@@ -47,6 +48,10 @@ public class OrderServiceImpl implements OrderService {
     private OrderDetailRepository orderDetailRepository;
     @Autowired
     private OrderMasterRepository orderMasterRepository;
+
+    @Autowired
+    private PayService payService ;
+
     @Override
     @Transactional
     public OrderDTO create(OrderDTO orderDTO) {
@@ -144,7 +149,7 @@ public class OrderServiceImpl implements OrderService {
         productService.increaseStock(cartDTOList);
         //如果支付就需要退款
         if(orderDTO.getPayStatus().equals(PayStatusEnum.SUCCESS.getCode())){
-            //TODO
+            payService.refund(orderDTO);
         }
 
         return orderDTO;
@@ -194,5 +199,14 @@ public class OrderServiceImpl implements OrderService {
         }
 
         return orderDTO;
+    }
+
+    @Override
+    public Page<OrderDTO> findeList(Pageable pageable) {
+        Page<OrderMaster> orderMasters= orderMasterRepository.findAll(pageable);
+        List<OrderDTO> orderDTOList = OrderMaster2OrderDTOConverter.convert(orderMasters.getContent());
+
+        Page<OrderDTO> result = new PageImpl<OrderDTO>(orderDTOList,pageable,orderMasters.getTotalElements());
+        return result;
     }
 }

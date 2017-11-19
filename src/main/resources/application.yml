@@ -14,6 +14,9 @@ server:
 wechat:
     mpAppId: wx6f4a93e30d824a1d
     mpAppSecret: 12c1f30c12b38a8766570cfc292ecf70
+    mchId: 140914202
+    mchKey: c976503d34ca432c601361f969fd8d85
+    keyPath: /var/weixin_cert/h5.p12
 #logging:
 #  pattern:
 #    console: "%d - %msg%n"
