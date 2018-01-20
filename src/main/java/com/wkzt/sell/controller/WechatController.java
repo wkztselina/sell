@@ -28,6 +28,9 @@ public class WechatController {
     @Autowired
     private WxMpService wxMpService;
 
+    @Autowired
+    private WxMpService wxOpenService;
+
     @GetMapping("/authorize")
     public String authorize(@RequestParam("returnUrl") String returnUrl){
         //2、调用方法
@@ -56,6 +59,17 @@ public class WechatController {
     }
 
 
+    @GetMapping("/qrAuthorize")
+    public String qrAuthorize(@RequestParam("returnUrl") String returnUrl){
+        String url="";
+        String redirectUrl=wxOpenService.buildQrConnectUrl(url,WxConsts.QRCONNECT_SCOPE_SNSAPI_LOGIN,URLEncoder.encode(returnUrl));
+        return "redirect:"+redirectUrl;
+    }
 
+    @GetMapping("/qrUserInfo")
+    public String qrUserInfo (@RequestParam("code")String code,
+                              @RequestParam("state")String returnUrl){
+        return null;
+    }
 
 }

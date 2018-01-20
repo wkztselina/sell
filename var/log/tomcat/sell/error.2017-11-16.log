@@ -1,0 +1,6 @@
+【取消订单】 订单中无商品详情，orderDTO=OrderDTO(orderId=123456, buyerName=师兄, buyerPhone=17605883257, buyerAddress=中软国际, buyerOpenid=110110, orderAmount=2.30, orderStatus=2, payStatus=0, createTime=2017-10-31 09:55:06.0, updateTime=2017-10-31 09:55:06.0, orderDetailList=[])
+【卖家端取消订单】查询不到订单
+【取消订单】 订单中无商品详情，orderDTO=OrderDTO(orderId=1234567, buyerName=师兄, buyerPhone=17605883257, buyerAddress=中软国际, buyerOpenid=110110, orderAmount=2.50, orderStatus=2, payStatus=0, createTime=2017-10-31 10:02:06.0, updateTime=2017-10-31 10:02:06.0, orderDetailList=[])
+【卖家端取消订单】查询不到订单
+【取消订单】 订单中无商品详情，orderDTO=OrderDTO(orderId=1234567, buyerName=师兄, buyerPhone=17605883257, buyerAddress=中软国际, buyerOpenid=110110, orderAmount=2.50, orderStatus=2, payStatus=0, createTime=2017-10-31 10:02:06.0, updateTime=2017-10-31 10:02:06.0, orderDetailList=[])
+【卖家端取消订单】查询不到订单

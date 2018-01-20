@@ -1,0 +1,14 @@
+2017-09-20 10:40:37.308  INFO 9964 --- [main] com.wkzt.sell.LoggerTest                 : Starting LoggerTest on wkzt-PC with PID 9964 (started by wkzt in E:\sell)
+2017-09-20 10:40:37.309  INFO 9964 --- [main] com.wkzt.sell.LoggerTest                 : No active profile set, falling back to default profiles: default
+2017-09-20 10:40:37.354  INFO 9964 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6cd28fa7: startup date [Wed Sep 20 10:40:37 CST 2017]; root of context hierarchy
+2017-09-20 10:40:39.541  INFO 9964 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@6cd28fa7: startup date [Wed Sep 20 10:40:37 CST 2017]; root of context hierarchy
+2017-09-20 10:40:39.634  INFO 9964 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-20 10:40:39.636  INFO 9964 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-20 10:40:39.669  INFO 9964 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-20 10:40:39.669  INFO 9964 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-20 10:40:39.720  INFO 9964 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-20 10:40:39.942  INFO 9964 --- [main] com.wkzt.sell.LoggerTest                 : Started LoggerTest in 3.225 seconds (JVM running for 4.18)
+2017-09-20 10:40:40.208  INFO 9964 --- [main] com.wkzt.sell.LoggerTest                 : info...
+2017-09-20 10:40:40.208  INFO 9964 --- [main] com.wkzt.sell.LoggerTest                 : name:hanchao ,password:123456
+2017-09-20 10:40:40.211 ERROR 9964 --- [main] com.wkzt.sell.LoggerTest                 : error...
+2017-09-20 10:40:40.219  INFO 9964 --- [Thread-2] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@6cd28fa7: startup date [Wed Sep 20 10:40:37 CST 2017]; root of context hierarchy

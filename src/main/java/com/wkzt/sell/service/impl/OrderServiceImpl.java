@@ -15,6 +15,7 @@ import com.wkzt.sell.repository.OrderMasterRepository;
 import com.wkzt.sell.service.OrderService;
 import com.wkzt.sell.service.PayService;
 import com.wkzt.sell.service.ProductService;
+import com.wkzt.sell.service.WebSocket;
 import com.wkzt.sell.utils.KeyUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.mapping.Collection;
@@ -52,6 +53,9 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     private PayService payService ;
 
+    @Autowired
+    private WebSocket webSocket;
+
     @Override
     @Transactional
     public OrderDTO create(OrderDTO orderDTO) {
@@ -88,6 +92,9 @@ public class OrderServiceImpl implements OrderService {
                 new CartDTO(e.getProductId(),e.getProductQuantity())
         ).collect(Collectors.toList());
         productService.decreaseStock(cartDTOList);
+
+        //发送websocket消息
+        webSocket.sendMessage("有新的订单");
         return orderDTO;
     }
 

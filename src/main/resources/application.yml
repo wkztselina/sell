@@ -14,9 +14,25 @@ server:
 wechat:
     mpAppId: wx6f4a93e30d824a1d
     mpAppSecret: 12c1f30c12b38a8766570cfc292ecf70
+    openAppId: xxxxxxxxxxx
+    openAppSecret: xxxxxx
     mchId: 140914202
     mchKey: c976503d34ca432c601361f969fd8d85
     keyPath: /var/weixin_cert/h5.p12
+redis:
+    host: 127.0.0.1
+    port: 6379
+projectUrl:
+    wechatMpAuthorize: http://sell.natapp4.cc
+    wechatOpenAuthorize: http://sell.natapp4.cc
+    sell: http://sell.natapp4.cc
+#开发用mybatis显示sql语句
+logging:
+    level:
+      com.wkzt.sell.dataopject.mapper: trace
+#开发用mybatis写法为XML
+mybatis:
+    mapper-locations: classpath:mapper/*.xml
 #logging:
 #  pattern:
 #    console: "%d - %msg%n"
